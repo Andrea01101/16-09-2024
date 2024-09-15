@@ -1,0 +1,13 @@
+from dataclasses import dataclass
+
+from model.state import State
+
+
+@dataclass
+class Neightbours:
+    state1: State
+    state2: State
+    tot: int
+
+    def __str__(self):
+        return f"Arco: {self.state1.id}-{self.state2.id}"
